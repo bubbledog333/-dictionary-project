@@ -1,17 +1,28 @@
-
+import  {useState}  from "react";
 import './App.css';
 
 function App() {
+ let [keyWord , setKeyWord] = useState("");
+  function handleSubmit(event){
+    alert(` searching for ${keyWord}'s definition`)
+    event.preventDefault()
+   
+  } 
+  function handleKeyWord(event){
+    setKeyWord(event.target.value)
+  }
   return (
+
     <div className="App">
       <header className="App-header">
       <h1>-Dictionary project-</h1>
-      <p>Form , input , boostrap, and ect.</p>
-      <a href="l" class="btn btn-dark shadow">Button</a>
-     <br/> <form>
-        <input placeholder="What to look up?"/>
+  
+     <br/> <form onSubmit={handleSubmit}>
+        <input placeholder="What to look up?"onChange={handleKeyWord} class="shadow"/>
+      <br/>  <input class="btn btn-dark shadow " type="submit"/> 
       </form>
-       
+   
+
       </header>
     </div>
   );
