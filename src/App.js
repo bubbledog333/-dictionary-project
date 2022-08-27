@@ -1,16 +1,18 @@
 import  {useState}  from "react";
 import axios from "axios";
+import Results from "./Results";
 import './App.css';
 
 function App() {
  let [keyWord , setKeyWord] = useState("");
- 
+ let [results, setResults] = useState(null);
  
  function handleResponse(response){
-console.log(response.data)
+  console.log(response.data[0]);
+  setResults(response.data[0]);
+  
  }
   function handleSubmit(event){
-    alert(` searching for ${keyWord}'s definition`)
     event.preventDefault()
    
     let apiUrl =`https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyWord}`
@@ -30,9 +32,11 @@ console.log(response.data)
         <input placeholder="What to look up?"onChange={handleKeyWord} class="shadow"/>
       <br/>  <input class="btn btn-dark shadow " type="submit"/> 
       </form>
-   
-
+      <br/>
+      
       </header>
+   
+      <Results results={results}/>
     </div>
   );
 }
