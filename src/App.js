@@ -37,7 +37,7 @@ function App() {
       </header>
    
       <div clasName="results"><Results results={results}/></div>
-   <br/>  <br/><p>This is open <a href="https://github.com/bubbledog333/-dictionary-project">scorced</a> with github</p>
+   <br/>  <br/><p>This project is builded by Reef Gab and is open <a href="https://github.com/bubbledog333/-dictionary-project">scorced</a> with github</p>
     </div>
   );
 }
