@@ -37,6 +37,7 @@ function App() {
       </header>
    
       <Results results={results}/>
+   <br/>  <br/><p>This is open <a href="https://github.com/bubbledog333/-dictionary-project">scorced</a> with github</p>
     </div>
   );
 }
