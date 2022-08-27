@@ -26,17 +26,17 @@ function App() {
 
     <div className="App">
       <header className="App-header">
-      <h1>-Dictionary project-</h1>
+      <h1 class="shadow">-Dictionary project-</h1>
   
      <br/> <form onSubmit={handleSubmit}>
         <input placeholder="What to look up?"onChange={handleKeyWord} class="shadow"/>
-      <br/>  <input class="btn btn-dark shadow " type="submit"/> 
+      <br/>  <input class="btn btn-dark shadow" type="submit"/> 
       </form>
       <br/>
       
       </header>
    
-      <Results results={results}/>
+      <div clasName="results"><Results results={results}/></div>
    <br/>  <br/><p>This is open <a href="https://github.com/bubbledog333/-dictionary-project">scorced</a> with github</p>
     </div>
   );

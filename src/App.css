@@ -9,7 +9,7 @@
 
 
 .App-header {
-  background-color: #93849b;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,4 +41,21 @@ input{
 }
 h1{
   margin-top: -600px;
+}body{
+  background-color: #93849b;
+}h2{
+ margin-top: -700px;
+ color:white
+}p, h3{
+  color:white;
+  font-size:20px
+}h1{
+  border-radius: 1rem;
+  padding: 4px 1rem;
+}a{
+  color:white;
+  text-decoration: none;
+  
+}a:hover{
+  color:rgb(236, 232, 232)
 }
